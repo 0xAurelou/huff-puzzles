@@ -9,5 +9,13 @@
 */
 
 #define macro MAIN() = takes(0) returns(0) {
-    
+   // Base stack: []
+   // calldatasize at the offset 0 
+   calldatasize       // []
+   returndatasize     // [size]
+   mstore             // []
+
+   0x20              // [0x20]
+   0x00             // [0x00, 0x20]
+   return
 }
