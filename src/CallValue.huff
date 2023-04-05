@@ -9,5 +9,13 @@
 */
 
 #define macro MAIN() = takes(0) returns(0) {
+    // Store CALLVALUE at Offset 0
+    callvalue          // [CALLVALUE]
+    returndatasize     // [CALLVALUE, returndatasize]
+    mstore             // []
+
+    0x20               // [32]
+    0x00               // [32, 0]
+    return             // []
     
 }
